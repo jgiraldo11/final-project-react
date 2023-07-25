@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Mango Mule",
+    "recipie": "Muddle cucumber and honey syrup in the bottom of a cocktail shaker. Add the mango puree and lime juice and shake with ice vigorously. Strain into a copper mug. Top with ginger beer and stir.",
+    "ingrediants": "4-5 slices of cucumber 1 oz honey syrup 1.5 oz mango puree 1.5 oz fresh lime juice 1.5 oz ginger beer Ice",
+    "type": "sweet",
+    "img": "public/images/sweet/Mango Mule.jpg"
+  },
+
+  {
+    "name": "Pineapple Ginger Beer",
+    "recipie": "Combine ingredients in a tin and shake very quickly with cold ice. Strain into a frozen Collins glass filled with fresh ice. Garnish with crystallized ginger and a lemon wedge. *Ginger syrup: Combine 1 liter fresh ginger juice roughly chopped ginger root through a juicer and fine strain twice with 675g superfine sugar; stir vigorously to combine.",
+    "ingrediants": "1 oz freshly squeezed lime juice 1 oz pineapple juice 1 oz ginger syrup*",
+    "type": "sweet",
+    "img": "public/images/sweet/Pineapple Ginger Beer.jpg"
+  },
+
+  {
+    "name": "Rose Fizz",
+    "recipie": "Dry shake all ingredients except lemonade. Add ice and shake vigorously until almost a foamy texture. Top with rose lemonade.",
+    "ingrediants": "1 egg white 1 tsp powdered sugar .5 oz fresh lemon juice Fentimans Rose Lemonade to top",
+    "type": "sweet",
+    "img": "public/images/sweet/Rose Fizz.jpg"
+  },
+
+  {
+    "name": "Shirley Ginger",
+    "recipie": "Stir ginger beer, club soda, lime juice, and grenadine in a pitcher. Pour into tall glasses with ice. Garnish with lime rounds and or maraschino cherries.",
+    "ingrediants": "4 cups Brooklyn Crafted Lemon Lime Ginger Beer 1 cup club soda 3 tbsp lime juice .25 cup grenadine",
+    "type": "sweet",
+    "img": "public/images/sweet/Shirley Ginger.jpg"
+  },
+
+  {
+    "name": "Spicy Watermelon Mint Agua Fresca",
+    "recipie": "Combine all of the ingredients and puree until smooth. Pour mixture through a strainer into a pitcher, forcing through most of the pulp. Chill and serve.",
+    "ingrediants": "2 cups cold water 2 cups watermelon (rind removed),seeded and chopped 2 tbsp granulated sugar 1 tbsp lime juice .25 cup mint leaves .5 jalapeño, roughly chopped Ice cubes or crushed ice (optional)",
+    "type": "sweet",
+    "img": "public/images/sweet/Spicy Watermelon.jpg"
+  },
+
+  {
+    "name": "Lemongrass Jasmine Iced Tea",
+    "recipie": "Shake with ice. Double Strain into high ball glass. Add cubed ice. Top with crushed ice. Garnish with lemon grass.",
+    "ingrediants": "Muddle 4-5 pieces of cut lemon grass .5 oz simple syrup .5 oz lemon 4 oz jasmine tea 2 oz lychee juice",
+    "type": "dry",
+    "img": "public/images/dry/Lemongrass Jasmine Iced Tea.jpg"
+  },
+
+  {
+    "name": "Lyres Dublin Double Irish Coffee",
+    "recipie": "Combine maple syrup, American Malt, and a splash of hot coffee in an Irish Coffee mug. Stir to dissolve maple, add remaining ingredients and top with whipped cream. Serve with a grated orange zest garnish.",
+    "ingrediants": "2.5 oz Lyre's American Malt 4 oz hot brewed coffee .25 oz premium maple syrup 3 oz whipped cream",
+    "type": "dry",
+    "img": "public/images/dry/Lyre's Dublin Double Irish Coffee.jpg"
+  },
+
+  {
+    "name": "Magic Apple",
+    "recipie": "Combine first three ingredients in a tall glass with ice. Stir until cold. Pour over fresh ice, garnish with cinnamon stick and apple slice, and serve.",
+    "ingrediants": "2 oz Ritual whiskey alternative 2 oz apple cider or apple juice 2 dashes bitters Cinnamon stick Apple slice",
+    "type": "dry",
+    "img": "public/images/dry/Magic Apple.jpg"
+  },
+
+  {
+    "name": "Vantage Point",
+    "recipie": "Place all the ingredients in a Boston shaker with plenty of ice. Shake for 15 seconds and strain into a tumbler over a large ice cube. Garnish with a twist of orange peel.",
+    "ingrediants": "2 oz New London Light 2 oz coffee (cold brew, decaffeinated or fresh) .5 oz agave syrup Orange peel to garnish",
+    "type": "dry",
+    "img": "public/images/dry/Vantage Point.jpg"
+  },
+
+  {
+    "name": "Virgin Cucumber Gimlet",
+    "recipie": "Combine all ingredients and shake with ice. Serve in a rocks glass over crushed ice. Garnish with a rolled cucumber slice.",
+    "ingrediants": "1.5 oz club soda 4-5 slices of muddled cucumber 1 oz fresh lime juice 1 oz simple syrup",
+    "type": "dry",
+    "img": "public/images/dry/Virgin Cucumber Gimlet.jpg"
+  },
+
+  {
+    "name": "Berry Burlesque",
+    "recipie": "Combine and shake all ingredients except ginger beer in a shaker tin with ice, and then strain over fresh ice. Top with ginger beer.",
+    "ingrediants": ".5 oz lime juice .5 oz honey syrup 1 oz black currant puree 4-6 mint leaves Q Ginger Beer",
+    "type": "tart",
+    "img": "public/images/tart/Berry Burlesque.jpg"
+  },
+
+  {
+    "name": "Virgin Paloma",
+    "recipie": "Combine ingredients in a cocktail shaker and shake with ice. Strain over ice into a Collins glass and top with soda.",
+    "ingrediants": "1.5 oz lime juice 1 oz grapefruit juice 1 oz agave syrup Healthy pinch of sea salt",
+    "type": "tart",
+    "img": "public/images/tart/Virgin Paloma.jpg"
+  },
+
+  {
+    "name": "Rosemary Blueberry Smash",
+    "recipie": "Gently muddle blueberries, rosemary leaves, and honey syrup in the bottom of a cocktail shaker. Add lemon juice and shake, covered, with ice vigorously for 10 seconds. Strain through a mesh strainer into a tall glass of fresh ice. Top with sparkling water and stir to incorporate.",
+    "ingrediants": "7-8 blueberries 1 rosemary sprig, stripped 1 oz honey syrup 1 oz fresh lemon juice, strained 4 oz sparkling mineral water Ice",
+    "type": "tart",
+    "img": "public/images/tart/Rosemary Blueberry Smash.jpg"
+  },
+
+  {
+    "name": "Lavender Lemonade",
+    "recipie": "Bring water and honey to a boil in a large pot over medium-high heat. Gently crush the lavender in a mortar and pestle or in a bowl with a meat tenderizer. Add the crushed lavender to the pot then remove it from the heat. Cover, refrigerate, and steep for 2 hours. Strain the liquid through a fine mesh sieve. Stir in the lemon juice and serve over ice.",
+    "ingrediants": "6 cups water .5 cup honey 5 tbsp dried lavender 1 cup fresh lemon juice, strained",
+    "type": "tart",
+    "img": "public/images/tart/Lavender Lemonade.jpg"
+  },
+
+  {
+    "name": "Dry Cranberry Spitzer",
+    "recipie": "Combine all the ingredients (except the Q Grapefruit) in a cocktail shaker over ice. Shake vigorously. Strain into an iced Collins glass and top with Q Grapefruit. Stir well and garnish.",
+    "ingrediants": "1.5 oz Seedlip Grove 42 1 oz Monlin cranberry 1 oz Lime juice 2 dashes Orange bitters Top off with Q Grapefruit soda",
+    "type": "tart",
+    "img": "public/images/tart/Dry Cranberry Spritzer.jpg"
+  }
+
+]
