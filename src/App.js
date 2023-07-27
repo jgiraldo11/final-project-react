@@ -1,13 +1,20 @@
-import Test from './components/Card/test';
+// import Test from './components/Card/test';
+import Navbar from './components/Navbar';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
 import './styles/App.css';
 
+
 function App() {
-  return (
+
+  return(
     <>
-    <h1>Sip Savvy Mocktails</h1>
-    <Test />
+    <Navbar />
+    <Cards />
+    <Footer />
     </>
-  );
+  )
+  
 }
 
 export default App;
