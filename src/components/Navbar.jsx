@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react"
 
-export default function Navbar() {
-  const [mocktailsList, setMocktailsList] = useState()
-  const [message, setMessage] = useState("Click a button above to get mocktails")
+export default function Navbar({setMocktailsList}) {
+  
+  // const [message, setMessage] = useState("Click a button above to get mocktails")
   
   const getMocktails = async (type) => {
-    setMessage(`Loading ${type} mocktails...`)
-    //setMocktailsList()
-    const response = await fetch(`http://127.0.0.1:5002/mocktails${type}`)
-    const data = await response.json()
-    setMocktailsList(data)
+  const respond = await fetch(`http://localhost:5002/mocktails/${type}`);
+  const data = await respond.json()
+  setMocktailsList(data)
+  console.log(data)
   }
 
   return (
@@ -32,6 +31,9 @@ export default function Navbar() {
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <a class="mr-5 hover:text-white">
+            <button onClick={() => getMocktails("")}>All</button>
+          </a>
+          <a class="mr-5 hover:text-white">
             <button onClick={() => getMocktails("sweet")}>Sweet</button>
           </a>
           <a class="mr-5 hover:text-white">
@@ -39,9 +41,6 @@ export default function Navbar() {
           </a>
           <a class="mr-5 hover:text-white">
             <button onClick={() => getMocktails("dry")}>Dry</button>
-          </a>
-          <a class="mr-5 hover:text-white">
-            <button onClick={() => getMocktails("all")}>All</button>
           </a>
         </nav>
         
@@ -64,4 +63,4 @@ export default function Navbar() {
       </div>
     </header>
   );
-}
+  }
