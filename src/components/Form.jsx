@@ -23,8 +23,10 @@ export default function Form() {
           Add your creative drink here to join our wonderful collection 🍹
           </a>
 
-          <address className="mt-2 not-italic">
-          Sip, savor, and let your imagination flow! 😊💕"          </address>
+          <p className="mt-2 not-italic">
+          Sip, savor, and let your imagination flow! 😊💕 </p>
+          <br></br>
+          <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTF5ZnhncjBpb2ZiZHYzeHg3ZjJ4dmIwdTJ4c2NqNnY4Ym9neHprMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRuvr7aX6JMlN28/giphy.gif"/>
         </div>
       </div>
 
