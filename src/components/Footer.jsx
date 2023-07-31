@@ -1,5 +1,5 @@
-const currentYear= new Date().getFullYear();
-const githubLink = "https://github.com/jgiraldo11?tab=repositories"
+// const currentYear= new Date().getFullYear();
+// const githubLink = "https://github.com/jgiraldo11?tab=repositories"
 
 export default function Footer() {
   
@@ -13,8 +13,10 @@ export default function Footer() {
       </svg>
       <span class="ml-3 text-xl">Sip Savvy Mocktails</span>
     </a>
-    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 Sip Savvy Mocktails —
-      <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">Lets get the party started!</a>
+    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©  {new Date().getFullYear()}  2023 Sip Savvy Mocktails —
+      <a href="https://github.com/jgiraldo11" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">Lets get the party started!
+      <img src="images/logo/github.webp" />
+      </a>
     </p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
       <a class="text-gray-400">
