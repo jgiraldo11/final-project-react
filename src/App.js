@@ -14,7 +14,7 @@ function App() {
     <>
     <Navbar setMocktailsList={setMocktailsList} setShowModal={setShowModal} />
     <Cards mocktailsList={mocktailsList} />
-    {showModal && <Form />}
+    {showModal && <Form setMocktailsList={setMocktailsList}/>}
     <Footer />
     </>
   )

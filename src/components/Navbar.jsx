@@ -15,6 +15,7 @@ export default function Navbar({setMocktailsList, setShowModal}) {
     getMocktails("")
   }, []) 
 
+
   return (
     <header className="text-gray-400 bg-gray-900 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -35,22 +36,24 @@ export default function Navbar({setMocktailsList, setShowModal}) {
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <a className="mr-5 hover:text-white">
+            <button onClick={() => getMocktails("tart")} className="hover:text-sky-500">Tart</button>
+          </a>
+          <a className="mr-5 hover:text-white">
+            <button onClick={() => getMocktails("dry")} className="hover:text-yellow-200">Dry</button>
+          </a>
+          <a className="mr-5 hover:text-white">
+            <button onClick={() => getMocktails("sweet")} className="hover:text-pink-400">Sweet</button>
+          </a>
+          <a className="mr-5 hover:text-white">
             <button onClick={() => getMocktails("")}>All</button>
-          </a>
-          <a className="mr-5 hover:text-white">
-            <button onClick={() => getMocktails("sweet")}>Sweet</button>
-          </a>
-          <a className="mr-5 hover:text-white">
-            <button onClick={() => getMocktails("tart")}>Tart</button>
-          </a>
-          <a className="mr-5 hover:text-white">
-            <button onClick={() => getMocktails("dry")}>Dry</button>
           </a>
         </nav>
         
 
-
-        <button onClick= {() => setShowModal(true)} className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+        <div id="bottom-of-page">
+        <button 
+        onClick= {() => setShowModal(true)}
+        className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:outline hover:outline-offset-2 hover:outline-2 hover:outline-pink-500">
           + Add Mocktail 
           <svg
             fill="none"
@@ -59,12 +62,14 @@ export default function Navbar({setMocktailsList, setShowModal}) {
             strokeLinejoin="round"
             strokeWidth="2"
             className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </button>
+        </div>
+
       </div>
     </header>
   );
-  }
+}
+  

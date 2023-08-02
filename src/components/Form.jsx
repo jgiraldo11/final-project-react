@@ -1,13 +1,51 @@
-{/*
-  Heads up! 👋
 
-  Plugins:
-    - @tailwindcss/forms
-*/}
+export default function Form({setMocktailsList}) {
 
-export default function Form() {
 
-  return (
+const addNewMocktail = (e) => {
+  e.preventDefault()
+let typeChecked = ''
+console.log(e.target.option1.checked)
+if (e.target.option1.checked){
+typeSelected = 'sweet'
+}
+if (e.target.option2.checked){
+  typeSelected = 'dry'
+}
+if (e.target.option3.checked){
+  typeSelected = 'tart'
+}
+console.log({typeChecked})
+const newMocktail = {
+  name: e.target.name.value,
+  recipe: e.target.recipe.value,
+  img: e.target.image.value,
+  type: typeSelected,
+  ingredients: e.target.ingredients.value,
+}
+fetch('https://final-api-jg.web.app/mocktails', {
+  method: 'POST',
+  headers: {
+    'Content-type': 'application/json',
+  },
+  body: JSON.stringify(newMocktail)
+})
+.then(response => response.json())
+      .then(data => setMocktailsList(data))
+      .catch(alert)
+      .finally(() => {
+        e.target.name.value = ''
+        e.target.recipe.value = ''
+        e.target.image.value = ''
+        e.target.option1.checked = false
+        e.target.option2.checked = false
+        e.target.option3.checked = false
+        e.target.ingredients.value = ''
+      })
+
+}
+
+return (
     
 <section className="text-gray-400 bg-gray-800 body-font">
   <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -30,15 +68,16 @@ export default function Form() {
         </div>
       </div>
 
-      <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <form action="" className="space-y-4">
+      <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12" id="mocktail-form">
+        <form onSubmit={addNewMocktail} className="space-y-4">
           <div>
             <label className="sr-only" htmlFor="name">Mocktail Name:</label>
             <input
               className="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="Mocktail Name"
               type="text"
-              id="Mocktail Name:"
+              id="name"
+              required
             />
           </div>
 
@@ -47,9 +86,10 @@ export default function Form() {
               <label className="sr-only" htmlFor="email">Ingredients:</label>
               <input
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Ingredients:"
+                placeholder="Ingredients"
                 type="text"
-                id="Ingredients:"
+                id="ingredients"
+                required
               />
             </div>
           </div>
@@ -115,10 +155,22 @@ export default function Form() {
 
             <textarea
               className="w-full rounded-lg border-gray-200 p-3 text-sm"
-              placeholder="Recipe:"
+              placeholder="Recipe"
               rows="8"
-              id="message"
+              id="recipe"
+              required
             ></textarea>
+          </div>
+
+          <div>
+          <label className="sr-only" htmlFor="email">Image:</label>
+              <input
+                className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                placeholder="Image:"
+                type="text"
+                id="image"
+                required
+              />
           </div>
 
           <div className="mt-4">

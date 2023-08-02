@@ -41,8 +41,8 @@ export default function Cards({ mocktailsList }) {
                 <div className="flex relative">
                   <img
                     alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src={`/${drink.img}`}
+                    className="absolute  max-h-[300px] min-h-[300px] inset-0 w-full h-full object-cover object-center drink-image"
+                    src={`${drink.img}`}
                   />
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                     <h2 className="tracking-widest text-sm title-font font-medium text-pink-400 mb-1 uppercase">
@@ -51,12 +51,12 @@ export default function Cards({ mocktailsList }) {
                     <h1 className="title-font text-lg font-medium text-white mb-3">
                       {drink.name}
                     </h1>
-                    <h2>Ingredients: </h2>
+                    <h2>INGREDIENTS: </h2>
                     <ul>
                       <li className="leading-relaxed">{drink.ingredients}</li>
                     </ul>
-                    <h2>Recipie: </h2>
-                    <p className="leading-relaxed">{drink.recipie}</p>
+                    <h2>RECIPE: </h2>
+                    <p className="leading-relaxed">{drink.recipe}</p>
                   </div>
                 </div>
               </div>
