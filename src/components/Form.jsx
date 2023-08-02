@@ -7,20 +7,20 @@ const addNewMocktail = (e) => {
 let typeChecked = ''
 console.log(e.target.option1.checked)
 if (e.target.option1.checked){
-typeSelected = 'sweet'
+typeChecked = 'sweet'
 }
 if (e.target.option2.checked){
-  typeSelected = 'dry'
+  typeChecked = 'dry'
 }
 if (e.target.option3.checked){
-  typeSelected = 'tart'
+  typeChecked = 'tart'
 }
 console.log({typeChecked})
 const newMocktail = {
   name: e.target.name.value,
   recipe: e.target.recipe.value,
   img: e.target.image.value,
-  type: typeSelected,
+  type: typeChecked,
   ingredients: e.target.ingredients.value,
 }
 fetch('https://final-api-jg.web.app/mocktails', {
