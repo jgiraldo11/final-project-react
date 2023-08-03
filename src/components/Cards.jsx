@@ -1,17 +1,19 @@
 import { useCallback, useState } from "react";
 
+// This is a (function) called 'Cards'
+// It knows how to create cards to show drinks (mocktails)
+// It needs something called 'mocktailsList' to work
+// 'mocktailsList' is like a list of all the drinks (mocktails) we want to show
 export default function Cards({ mocktailsList }) {
-  // const [message, setMessage] = useState("Click a button above to get mocktails")
-
-  // const getMocktails = async (type) => {
-  //   setMessage(`Loading ${type} mocktails...`)
-  //   //setMocktailsList()
-  //   const response = await fetch(`http://127.0.0.1:5002/mocktails${type}`)
-  //   const data = await response.json()
-  //   setMocktailsList(data)
-  // }
+    // The code inside this function will run when we use 'Cards'
+    // For each drink (mocktail) in the 'mocktailsList', do the following:
+    // - Create a special card and fill it with the information about the drink
+    //   (like the name, recipe, image, type, and ingredients)
+    // - Show the special card to everyone so they can see the drink
+    // When we finish showing all the cards, the 'Cards' box is done!
 
   return (
+    // className is an attribute used to apply CSS classes 
     <section className="text-gray-400 bg-gray-900 body-font h-full">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
@@ -25,38 +27,34 @@ export default function Cards({ mocktailsList }) {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {/* <div class="lg:w-1/3 sm:w-1/2 p-4">
-          <div class="flex relative">
-            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/dry/Lemongrass Jasmine Iced Tea.jpg"/>
-            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-pink-400 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-white mb-3">Shooting Stars</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-            </div>
-          </div>
-        </div> */}
-          {mocktailsList &&
-            mocktailsList.map((drink, i) => (
-              <div key={drink._id} className="lg:w-1/3 sm:w-1/2 p-4">
+
+          {/* Check if we have a list of drinks (mocktails)
+          The list is called 'mocktailsList' */}
+          {mocktailsList && // If we have the list of drinks (mocktails),then for each drink in the list, do the following:
+            mocktailsList.map((drink, i) => ( // Get the information about the current drink (like the name, recipe, image, type, and ingredients) Show the information about the current drink to everyone. Now, move to the next drink in the list and repeat the process
+              //key={drink._id} is not a prop. It is a special attribute used for performance optimization when rendering lists of elements.
+              <div key={drink._id} className="lg:w-1/3 sm:w-1/2 p-4"> 
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute  max-h-[300px] min-h-[300px] inset-0 w-full h-full object-cover object-center drink-image"
-                    src={`${drink.img}`}
+                    src={`${drink.img}`} // this is a prop
                   />
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                     <h2 className="tracking-widest text-sm title-font font-medium text-pink-400 mb-1 uppercase">
-                      {drink.type}
+                      {drink.type} 
+                      {/* this is a prop */}
                     </h2>
                     <h1 className="title-font text-lg font-medium text-white mb-3">
                       {drink.name}
+                      {/* this is a prop */}
                     </h1>
                     <h2>INGREDIENTS: </h2>
                     <ul>
-                      <li className="leading-relaxed">{drink.ingredients}</li>
+                      <li className="leading-relaxed">{drink.ingredients}</li> {/* this is a prop */}
                     </ul>
                     <h2>RECIPE: </h2>
-                    <p className="leading-relaxed">{drink.recipe}</p>
+                    <p className="leading-relaxed">{drink.recipe}</p> {/* this is a prop */}
                   </div>
                 </div>
               </div>

@@ -1,8 +1,11 @@
-// const currentYear= new Date().getFullYear();
-// const githubLink = "https://github.com/jgiraldo11?tab=repositories"
 
+// This is a function called 'Footer'
+// It creates a special component for the bottom part of a web page
 export default function Footer() {
-  
+// The code inside this function will run when we use the 'Footer' component
+// Create a container (a div element) for the footer
+// Inside the container, add some elements like text, links, or icons
+// Now, show the footer to everyone so they can see it
 
   return(
     <footer class="text-gray-400 bg-gray-900 body-font">
@@ -47,19 +50,3 @@ export default function Footer() {
   )
 
 }
-// return (
-//   <footer className="footer">
-//       <div>
-//           <h2>Let's try something new!</h2>
-//       </div>
-//       <div>
-//           <div>
-//               <h1>Sip Savvy Mocktails</h1>
-//               <p>Lets get the party started!</p>
-//           </div>
-//               <div>
-//                   <p>&copy;Sip Savvy Mocktails. All Rights Reserved {getFullYear}. </p>
-//               </div>
-//       </div>
-//   </footer>
-// )
