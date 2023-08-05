@@ -19,7 +19,7 @@ export default function Navbar({setMocktailsList, setShowModal}) {
   // It knows how to get drinks (mocktails) of a specific type
   // It needs a 'type' to know which type of mocktails to get
   const getMocktails = async (type) => {
-  // The code inside this function will run when we use 'getMocktails' 
+  // The code inside this function will run when we use 'getMocktails' 0-s
 
   // Create a (fetch request) to a special place ('https://final-api-jg.web.app/mocktails/{type}')
   // This special place (api) knows how to give us the drinks of the specified type
