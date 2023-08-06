@@ -7,6 +7,7 @@ import './styles/App.css';
 
 // Declare mocktailsList and setMocktailsList as State Variables
 // Declare showModal and setShowModal as State Variables
+// [getter, setter](value)
 function App() {
   const [mocktailsList, setMocktailsList] = useState()
   const [ showModal, setShowModal] = useState(false)

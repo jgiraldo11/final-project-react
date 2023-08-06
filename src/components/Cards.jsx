@@ -1,16 +1,12 @@
 import { useCallback, useState } from "react";
 
-// This is a (function) called 'Cards'
-// It knows how to create cards to show drinks (mocktails)
+// It knows how to create cards to show drinks 
 // It needs something called 'mocktailsList' to work
-// 'mocktailsList' is like a list of all the drinks (mocktails) we want to show
+// 'mocktailsList' is a list of all the drinks we want to show
 export default function Cards({ mocktailsList }) {
     // The code inside this function will run when we use 'Cards'
-    // For each drink (mocktail) in the 'mocktailsList', do the following:
     // - Create a special card and fill it with the information about the drink
-    //   (like the name, recipe, image, type, and ingredients)
     // - Show the special card to everyone so they can see the drink
-    // When we finish showing all the cards, the 'Cards' box is done!
 
   return (
     // className is an attribute used to apply CSS classes 
@@ -28,17 +24,18 @@ export default function Cards({ mocktailsList }) {
         </div>
         <div className="flex flex-wrap -m-4">
 
-          {/* Check if we have a list of drinks (mocktails)
-          The list is called 'mocktailsList' */}
-          {mocktailsList && // If we have the list of drinks (mocktails),then for each drink in the list, do the following:
-            mocktailsList.map((drink, i) => ( // Get the information about the current drink (like the name, recipe, image, type, and ingredients) Show the information about the current drink to everyone. Now, move to the next drink in the list and repeat the process
-              //key={drink._id} is not a prop. It is a special attribute used for performance optimization when rendering lists of elements.
+          {/* Check if we have a list of drinks */}
+          {mocktailsList && // If we have the list of drinks,then for each drink in the list, do the following:
+            mocktailsList.map((drink, i) => ( 
+            // Get the information about the current drink. Show the information about the current drink. 
+            // Then, move to the next drink in the list and repeat the process
+               
               <div key={drink._id} className="lg:w-1/3 sm:w-1/2 p-4"> 
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute  max-h-[300px] min-h-[300px] inset-0 w-full h-full object-cover object-center drink-image"
-                    src={`${drink.img}`} // this is a prop
+                    src={`${drink.img}`} // this is a prop.
                   />
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                     <h2 className="tracking-widest text-sm title-font font-medium text-pink-400 mb-1 uppercase">

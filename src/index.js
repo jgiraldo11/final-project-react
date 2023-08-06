@@ -11,11 +11,6 @@ root.render(
 );
 
 // 1. Get the root element from the DOM using its ID: rootElement = document.getElementById('root')
-
 // 2. Create a root using ReactDOM: root = ReactDOM.createRoot(rootElement)
+// 3. Render the application inside the root using React's StrictMode
 
-// 3. Render the application inside the root using React's StrictMode:
-//    root.render(
-//      <React.StrictMode>
-//        <App />
-//      </React.StrictMode>

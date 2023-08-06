@@ -1,99 +1,84 @@
 // This is a (function) to create a form 'setMocktailsList'
 // It needs something called 'setMocktailsList' to work properly.
 export default function Form({ setMocktailsList }) {
-  // The code inside this function will run when someone uses the form 'setMocktailsList'
 
-  // This is a (function) to add a new drink (mocktail)
+  // This is a (function) to add a new drink 
   // It needs (event 'e') to work
   const addNewMocktail = (e) => {
     e.preventDefault();
     // Stop doing anything else while we make this drink (prevent the usual behavior)
     // (e.g., don't let the page refresh when you click a button)
+    
     let typeChecked = "";
     // Prepare a section called 'typeChecked' for the new drink
     // We'll fill it later with the right type of mocktail
+    
     console.log(e.target.option1.checked);
     // Listen and pay attention to what the person does (event 'e')
-    // When they do something (like clicking a checkbox or button), check if 'option1' is checked (selected)
-
+    // When they do something (like clicking a checkbox or button), check if 'option_' is checked (selected)
+    // If 'option_' is checked (selected), fill the empty drink type called 'typeChecked' with 'type selected'
+    // Show the contents of the drink type 'typeChecked' to everyone (print its value)
     if (e.target.option1.checked) {
       typeChecked = "sweet";
     }
-    // If 'option1' is checked (selected), then do the following:
-    // Fill the empty drink type called 'typeChecked' with 'sweet'
     if (e.target.option2.checked) {
-      // If 'option2' is checked (selected), then do the following:
-      // Fill the empty type called 'typeChecked' with 'dry'
       typeChecked = "dry";
     }
-    // If 'option3' is checked (selected), then do the following:
-    // Fill the empty drink type called 'typeChecked' with 'tart'
     if (e.target.option3.checked) {
       typeChecked = "tart";
     }
 
-    // Show the contents of the drink type 'typeChecked' to everyone (print its value)
     console.log({ typeChecked });
-    // Prepare a new drink 'newMocktail'
-    // We'll fill it with the ingredients to create a new drink (mocktail)
+
     const newMocktail = {
-      // Get the name of the new pretend drink (mocktail) from the person (input field 'name')
       name: e.target.name.value,
-      // Get the recipe of the new pretend drink (mocktail) from the person (input field 'recipe')
       recipe: e.target.recipe.value,
-      // Get the image of the new pretend drink (mocktail) from the person (input field 'image')
       img: e.target.image.value,
-      // Fill the 'type' of the new pretend drink (mocktail) with the magical liquid 'typeChecked'
-      // The type is either 'sweet', 'dry', or 'tart', depending on what the person selected
       type: typeChecked,
-      // Get the ingredients of the new pretend drink (mocktail) from the person (input field 'ingredients')
       ingredients: e.target.ingredients.value,
+      // Get the name, recipe, image, and ingrediants of the new drink from the person (input field '')
+      // Fill the 'type' of the new drink with 'typeChecked'
+      // Get the ingredients of the new drink (input field 'ingredients')
       // Store all the gathered information in the 'newMocktail'
-      // The 'newMocktail will have the name, recipe, image, type, and ingredients of the new drink (mocktail)
+      // The 'newMocktail will have the name, recipe, image, type, and ingredients of the new drink 
     };
-    // Send a request to a special place called 'https://final-api-jg.web.app/mocktails'
-    // This special place (api) knows how to handle pretend drink (mocktail) requests
-    // The request is like a message, and we want to create a new drink (mocktail)
+
+    // Send a request to api
+    // API knows how to handle new drink request
+    // So, we tell the api that we want to 'POST' (make) a new one
     fetch("https://final-api-jg.web.app/mocktails", {
-      // So, we tell the special place (api) that we want to 'POST' (make) a new one
       method: "POST",
-      // In the message, we also include some important information about the new drink (mocktail)
       headers: {
         "Content-type": "application/json",
         // We say that the message is in a special language called 'JSON' and include the 'newMocktail'
-        // The special place (api) needs to know how to understand the message
+        // The api needs to know how to understand the message
         // So, we include a note (header) saying the message is in the 'application/json' format
       },
       body: JSON.stringify(newMocktail),
-      // Now, we send the message to the special place (api) and wait for it to do its magic
-      // The special place (api) will take the information from the 'newMocktail' and make the new drink (mocktail)
-      // When it's done, it might send us a message back, but we'll wait for it patiently
+      // Now, we send the message to the api and wait for it to do its magic
+      // The api will take the information from the 'newMocktail' and make the new drink 
     })
-      // Wait for a response from a special place (api) after sending a request
-      .then((response) => response.json())
+
+      // Wait for a response from api after sending a request
       // When the response arrives, take the information from the response (data)
       // and use it to fill a list called 'MocktailsList'
-      // This list will now have all the drinks (mocktails) the special place (api) knows about
-      .then((data) => setMocktailsList(data))
+      // This list will now have all the drinks the api knows about
       // If something goes wrong (an error happens), then show an alert message
+      .then((response) => response.json())
+      .then((data) => setMocktailsList(data))
       .catch(alert)
-      // No matter what happens, make sure to do the following things at the end:
       .finally(() => {
-        // - Empty the 'name' input field
         e.target.name.value = "";
-        // - Empty the 'recipe' input field
         e.target.recipe.value = "";
-        // - Empty the 'image' input field
         e.target.image.value = "";
-        // - Uncheck the 'option1' checkbox
         e.target.option1.checked = false;
-        // - Uncheck the 'option2' checkbox
         e.target.option2.checked = false;
-        // - Uncheck the 'option3' checkbox
         e.target.option3.checked = false;
-        // - Empty the 'ingredients' input field
         e.target.ingredients.value = "";
-        // It's like cleaning up after making a new drink (mocktail) and getting everything ready for the next one
+        // No matter what happens, make sure to do the following things at the end:
+        // - Empty the '' input field
+        // - Uncheck the 'option_' checkbox
+        // It's like cleaning up after making a new drink and getting everything ready for the next one
       });
   };
 

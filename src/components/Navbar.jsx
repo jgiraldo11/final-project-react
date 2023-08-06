@@ -6,38 +6,29 @@ import { useEffect } from "react";
 // It creates a navigation bar for a website
 
 // The 'Navbar' needs two things to work properly:
-// 1. A 'setMocktailsList' to create a list of pretend drinks (mocktails)
-// 2. A 'setShowModal' to control whether a magical modal is shown
+// 1. A 'setMocktailsList' to create a list of drinks (mocktails)
+// 2. A 'setShowModal' to control whether a form is shown
   
 export default function Navbar({setMocktailsList, setShowModal}) {
-  // The code inside this function will run when we use the 'Navbar' component
-  // Create a navigation bar with links and buttons
-  // When someone clicks on a link or button, do something with the 'setMocktailsList' or 'setShowModal' 
-  // Now, show the navigation bar to everyone so they can navigate around the website
+// When someone clicks on a link or button, do something with the 'setMocktailsList' or 'setShowModal'   
   
-  // This is a (function) called 'getMocktails'
   // It knows how to get drinks (mocktails) of a specific type
-  // It needs a 'type' to know which type of mocktails to get
   const getMocktails = async (type) => {
-  // The code inside this function will run when we use 'getMocktails' 0-s
 
-  // Create a (fetch request) to a special place ('https://final-api-jg.web.app/mocktails/{type}')
-  // This special place (api) knows how to give us the drinks of the specified type
+  // (fetch request) to the api to give us the drinks of the specified type
   const respond = await fetch(`https://final-api-jg.web.app/mocktails/${type}`);
-  // Wait for the response/reply from the special place (api)
+  // Wait for the response/reply from the api
   const data = await respond.json()
-  // When the response arrives, take the information (data) from the reply
-  // Use this information to fill the list called 'MocktailsList'
-  // Now, the list will have all the drinks (mocktails) of the specified type
+  // When the response arrives, it will take the information (data) and use the information to fill the list called 'MocktailsList'
   setMocktailsList(data)
-  // Also, show the information to everyone 
+  // Show the information 
   console.log(data) // print it to the console
   }
 
   // fetches a list of mocktails from an API.
   // The hook takes two arguments:
-  //The first argument is a callback function that will be executed after the component renders.
-  // The second argument is an array of dependencies. This array specifies the values that the callback function depends on. If any of the values in the array change, the callback function will be executed again.
+  // The first argument is a callback function that will be executed after the component renders.
+  // The second argument is an array of dependencies. If any of the values in the array change, the callback function will be executed again.
   useEffect ( () => {
     getMocktails("")
   }, []) 
